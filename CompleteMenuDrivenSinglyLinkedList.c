@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure of a node
+
 struct Node {
     int data;
     struct Node *next;
 };
 
-// Insert at beginning
+
 void insertAtBeginning(struct Node **head, int data) {
     struct Node *newNode = malloc(sizeof(struct Node));
 
@@ -18,7 +18,7 @@ void insertAtBeginning(struct Node **head, int data) {
     printf("Node inserted successfully.\n");
 }
 
-// Insert at end
+
 void insertAtEnd(struct Node **head, int data) {
     struct Node *newNode = malloc(sizeof(struct Node));
     newNode->data = data;
@@ -41,7 +41,7 @@ void insertAtEnd(struct Node **head, int data) {
     printf("Node inserted successfully.\n");
 }
 
-// Insert at a given position
+
 void insertAtPosition(struct Node **head, int data, int position) {
     if (position < 1) {
         printf("Invalid position.\n");
@@ -79,7 +79,7 @@ void insertAtPosition(struct Node **head, int data, int position) {
     printf("Node inserted successfully.\n");
 }
 
-// Delete from beginning
+
 void deleteFromBeginning(struct Node **head) {
     if (*head == NULL) {
         printf("List is empty.\n");
@@ -94,14 +94,14 @@ void deleteFromBeginning(struct Node **head) {
     printf("Node deleted successfully.\n");
 }
 
-// Delete from end
+
 void deleteFromEnd(struct Node **head) {
     if (*head == NULL) {
         printf("List is empty.\n");
         return;
     }
 
-    // Only one node
+    
     if ((*head)->next == NULL) {
         free(*head);
         *head = NULL;
@@ -121,7 +121,7 @@ void deleteFromEnd(struct Node **head) {
     printf("Node deleted successfully.\n");
 }
 
-// Delete from a given position
+
 void deleteAtPosition(struct Node **head, int position) {
     if (*head == NULL) {
         printf("List is empty.\n");
@@ -162,7 +162,7 @@ void deleteAtPosition(struct Node **head, int position) {
     printf("Node deleted successfully.\n");
 }
 
-// Display / Traverse the list
+
 void display(struct Node *head) {
     if (head == NULL) {
         printf("List is empty.\n");
@@ -181,7 +181,7 @@ void display(struct Node *head) {
     printf("NULL\n");
 }
 
-// Search an element
+
 void search(struct Node *head, int key) {
     struct Node *temp = head;
     int position = 1;
@@ -200,7 +200,7 @@ void search(struct Node *head, int key) {
     printf("Element %d not found.\n", key);
 }
 
-// Count number of nodes
+
 void countNodes(struct Node *head) {
     int count = 0;
     struct Node *temp = head;
@@ -213,7 +213,7 @@ void countNodes(struct Node *head) {
     printf("Number of nodes = %d\n", count);
 }
 
-// Reverse the linked list
+
 void reverse(struct Node **head) {
     struct Node *prev = NULL;
     struct Node *current = *head;
@@ -231,7 +231,7 @@ void reverse(struct Node **head) {
     printf("Linked list reversed successfully.\n");
 }
 
-// Free the entire list
+
 void freeList(struct Node **head) {
     struct Node *temp;
 
@@ -242,7 +242,7 @@ void freeList(struct Node **head) {
     }
 }
 
-// Main function
+
 int main() {
     struct Node *head = NULL;
 
