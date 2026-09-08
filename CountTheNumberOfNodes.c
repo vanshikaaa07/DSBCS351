@@ -6,7 +6,7 @@ struct Node {
     struct Node *next;
 };
 
-// Insert a node at the end
+
 void insertAtEnd(struct Node **head, int data) {
     struct Node *newNode = malloc(sizeof(struct Node));
 
@@ -27,7 +27,7 @@ void insertAtEnd(struct Node **head, int data) {
     temp->next = newNode;
 }
 
-// Count the number of nodes
+
 int countNodes(struct Node *head) {
     int count = 0;
     struct Node *temp = head;
@@ -40,7 +40,7 @@ int countNodes(struct Node *head) {
     return count;
 }
 
-// Display the linked list
+
 void display(struct Node *head) {
     struct Node *temp = head;
 
@@ -55,7 +55,7 @@ void display(struct Node *head) {
 int main() {
     struct Node *head = NULL;
 
-    // Creating the linked list
+    
     insertAtEnd(&head, 10);
     insertAtEnd(&head, 20);
     insertAtEnd(&head, 30);
